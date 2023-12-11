@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="local/termsurvey/db" VERSION="2022052001" COMMENT="XMLDB file for term survey plugin"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../../lib/xmldb/xmldb.xsd"
+>
+  <TABLES>
+    <TABLE NAME="fnu_course_code_mapping" COMMENT="contains mapping between course code and shortnames">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" COMMENT="Unique ID"/>
+        <FIELD NAME="coursecode" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" COMMENT="FNU course code"/>
+        <FIELD NAME="shortname" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" COMMENT="course shortname from mdl_course"/>
+        <FIELD NAME="courseid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="mdl_course Primary ID"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" COMMENT="primary key of the shortname_course_code_mapping table"/>
+      </KEYS>
+    </TABLE>
+    <TABLE NAME="fnu_survey_attempts" COMMENT="contains survey attempts">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" COMMENT="Unique ID"/>
+        <FIELD NAME="survey_type" TYPE="char" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="Type of Survey"/>
+        <FIELD NAME="user_id" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" COMMENT="moodle user id"/>
+        <FIELD NAME="attempt_date" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" COMMENT="date of attempt"/>
+        <FIELD NAME="age" TYPE="char" LENGTH="256" NOTNULL="false" SEQUENCE="false" COMMENT="user age"/>
+        <FIELD NAME="gender" TYPE="char" LENGTH="256" NOTNULL="false" SEQUENCE="false" COMMENT="user gender"/>
+        <FIELD NAME="is_first_year" TYPE="char" LENGTH="256" NOTNULL="false" SEQUENCE="false" COMMENT="is user first year"/>
+        <FIELD NAME="campus" TYPE="char" LENGTH="256" NOTNULL="false" SEQUENCE="false" COMMENT="campus name"/>
+        <FIELD NAME="college" TYPE="char" LENGTH="256" NOTNULL="false" SEQUENCE="false" COMMENT="college name"/>
+        <FIELD NAME="course" TYPE="char" LENGTH="256" NOTNULL="false" SEQUENCE="false" COMMENT="course Code"/>
+        <FIELD NAME="programme" TYPE="char" LENGTH="256" NOTNULL="false" SEQUENCE="false" COMMENT="programme name"/>
+        <FIELD NAME="course_q1" TYPE="char" LENGTH="256" NOTNULL="false" SEQUENCE="false" COMMENT="course_q1"/>
+        <FIELD NAME="course_q2" TYPE="char" LENGTH="256" NOTNULL="false" SEQUENCE="false" COMMENT="course_q2"/>
+        <FIELD NAME="course_q3" TYPE="char" LENGTH="256" NOTNULL="false" SEQUENCE="false" COMMENT="course_q3"/>
+        <FIELD NAME="teacher_q1" TYPE="char" LENGTH="256" NOTNULL="false" SEQUENCE="false" COMMENT="teacher_q1"/>
+        <FIELD NAME="teacher_q2" TYPE="char" LENGTH="256" NOTNULL="false" SEQUENCE="false" COMMENT="teacher_q2"/>
+        <FIELD NAME="teacher_q3" TYPE="char" LENGTH="256" NOTNULL="false" SEQUENCE="false" COMMENT="teacher_q3"/>
+        <FIELD NAME="teacher_q4" TYPE="char" LENGTH="256" NOTNULL="false" SEQUENCE="false" COMMENT="teacher_q4"/>
+        <FIELD NAME="consultation" TYPE="char" LENGTH="256" NOTNULL="false" SEQUENCE="false" COMMENT="consultation"/>
+        <FIELD NAME="outcome_q1" TYPE="char" LENGTH="256" NOTNULL="false" SEQUENCE="false" COMMENT="outcome_q1"/>
+        <FIELD NAME="outcome_q2" TYPE="char" LENGTH="256" NOTNULL="false" SEQUENCE="false" COMMENT="outcome_q2"/>
+        <FIELD NAME="has_labs" TYPE="char" LENGTH="256" NOTNULL="false" SEQUENCE="false" COMMENT="has_labs"/>
+        <FIELD NAME="lab_q1" TYPE="char" LENGTH="256" NOTNULL="false" SEQUENCE="false" COMMENT="lab_q1"/>
+        <FIELD NAME="lab_q2" TYPE="char" LENGTH="256" NOTNULL="false" SEQUENCE="false" COMMENT="lab_q2"/>
+        <FIELD NAME="lab_q3" TYPE="char" LENGTH="256" NOTNULL="false" SEQUENCE="false" COMMENT="lab_q3"/>
+        <FIELD NAME="has_clinicals" TYPE="char" LENGTH="256" NOTNULL="false" SEQUENCE="false" COMMENT="has_clinicals"/>
+        <FIELD NAME="clinical_q1" TYPE="char" LENGTH="256" NOTNULL="false" SEQUENCE="false" COMMENT="clinical_q1"/>
+        <FIELD NAME="clinical_q2" TYPE="char" LENGTH="256" NOTNULL="false" SEQUENCE="false" COMMENT="clinical_q2"/>
+        <FIELD NAME="clinical_q3" TYPE="char" LENGTH="256" NOTNULL="false" SEQUENCE="false" COMMENT="clinical_q3"/>
+        <FIELD NAME="clinical_q4" TYPE="char" LENGTH="256" NOTNULL="false" SEQUENCE="false" COMMENT="clinical_q4"/>
+        <FIELD NAME="overall_q1" TYPE="char" LENGTH="256" NOTNULL="false" SEQUENCE="false" COMMENT="overall_q1"/>
+        <FIELD NAME="overall_q2" TYPE="char" LENGTH="256" NOTNULL="false" SEQUENCE="false" COMMENT="overall_q2"/>
+        <FIELD NAME="suggestion" TYPE="char" LENGTH="1333" NOTNULL="false" SEQUENCE="false" COMMENT="suggestion"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" COMMENT="primary key of attempts"/>
+      </KEYS>
+    </TABLE>
+  </TABLES>
+</XMLDB>
