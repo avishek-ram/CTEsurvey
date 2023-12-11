@@ -77,24 +77,24 @@ if (isguestuser()) {  // Force them to see system default, no editing allowed
             'course_q1' => $survey_data['course_q1'],
             'course_q2' => $survey_data['course_q2'],
             'course_q3' => $survey_data['course_q3'],
-            'teacher_q1' => $survey_data['teacher_q1'],
+            'teacher_q1' => $survey_data['teacher_q1'], //teacher_q1 has now become course_q4 (new survey)
             'teacher_q2' => $survey_data['teacher_q2'],
-            'teacher_q3' => $survey_data['teacher_q3'],
+            'teacher_q3' => $survey_data['teacher_q3'], //teacher_q3 has become teacher_q5 and note teacher_q1 and teacher_q2 is not being used
             'teacher_q4' => $survey_data['teacher_q4'],
-            'consultation' => $survey_data['consultation'],
+            'consultation' => $survey_data['consultation'],//has been removed
             'outcome_q1' => $survey_data['outcome_q1'],
             'outcome_q2' => $survey_data['outcome_q2'],
             'has_labs' => $survey_data['has_labs'],
-            'lab_q1' => $survey_data['lab_q1'],
-            'lab_q2' => $survey_data['lab_q2'],
+            'lab_q1' => $survey_data['lab_q1'],//is being used by 8.The course
+            'lab_q2' => $survey_data['lab_q2'],//has been removed
             'lab_q3' => $survey_data['lab_q3'],
             'has_clinicals' => $survey_data['has_clinicals'],
-            'clinical_q1' => $survey_data['clinical_q1'],
-            'clinical_q2' => $survey_data['clinical_q2'],
-            'clinical_q3' => $survey_data['clinical_q3'],
+            'clinical_q1' => $survey_data['clinical_q1'],//has been removed
+            'clinical_q2' => $survey_data['clinical_q2'],//has been removed
+            'clinical_q3' => $survey_data['clinical_q3'],//has been removed
             'clinical_q4' => $survey_data['clinical_q4'],
-            'overall_q1' => $survey_data['overall_q1'],
-            'overall_q2' => $survey_data['overall_q2'],
+            'overall_q1' => $survey_data['overall_q1'],//has been removed
+            'overall_q2' => $survey_data['overall_q2'],//has been removed
             'suggestion' => $survey_data['suggestion'],
         ];
 

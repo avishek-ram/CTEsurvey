@@ -15,7 +15,7 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 {{!
-    @template local_termsurvey/render_trimester_survey
+    @template local_termsurvey/render_semester_survey
 
 
     Example context (json):
@@ -25,7 +25,7 @@
 }}
 
 <!doctype html>
-<!--Author : Avishek Ram Copyright 2022
+<!--Author : Avishek Anishkar Ram Copyright 2022
  Department of Research & Education Enabling Technology, FNU -->
 
 <html lang="en">
@@ -61,7 +61,7 @@
                                         <div class="col col-sm-9"> 
                                             <h2 style=" color: white;">
                                                 Student Course & Teacher <br/> Evaluation Survey<br/>
-                                                Trimester 2, 2022
+                                                Trimester 3, 2023.
                                             </h2>
                                         </div>
                                     </div>
@@ -70,7 +70,7 @@
                                         <div class="col-sm-12 col-md-12">
                                             <p style=" color: white; font-size: 18px;">Dear Students: The university-wide Teaching and Learning Evaluation exercise provides a channel for you to&nbsp;
                                             <span style=" color: white;">share your experiences of courses, teaching and learning.&nbsp;</span><span>EACH FORM WILL TAKE APPROXIMATELY 5-10 MINUTES TO COMPLETE. Your feedback is valued and will contribute to the cycle of quality assurance and enhancement.&nbsp;</span>
-                                            <span style=" color: white;">This survey is CONFIDENTIAL and ANONYMOUS. The information collected will be analyzed and reviewed by appropriate University Committees and groups.&nbsp;</span><br/><br/><span>Please note you need to fill and submit separate forms for your individual Course Codes.&nbsp;</span>
+                                            <span style=" color: white;">This survey is CONFIDENTIAL and ANONYMOUS. The information collected will be analyzed and reviewed by appropriate University Committees and groups.&nbsp;</span><br><span>Please note you need to fill and submit separate forms for your individual Course Codes.&nbsp;</span>
                                             <br><span style=" color: white;">For further information or queries, please contact Manager Planning and Business Intelligence PH 3394000| Ext 2017| </span>
                                             <a href="mailto:mpbi@fnu.ac.fj" class="linkified">mpbi@fnu.ac.fj</a><br></p>
                                         </div>
@@ -141,7 +141,7 @@
                                                     <div class="question-title-box">
                                                         <div>
                                                             <div class="office-form-question-title" >
-                                                                <span class="ordinal-number">3.</span><span class="text-format-content">Are you a First Year FNU Student? *</span><span class="required-star"></span>
+                                                                <span class="ordinal-number">3.</span><span class="text-format-content">Are you a First Year University Student? *</span><span class="required-star"></span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -202,7 +202,8 @@
                                                 <div class ="col col-sm-12">
                                                     <select id="campus_select" class="">
                                                         <option value="Namaka Campus">Namaka Campus</option>
-                                                        <option value="Nasese Campus/ Hospitality and Tourism campus">Nasese Campus</option>
+                                                        <option value="Nasese Campus">Nasese Campus</option>
+                                                        <option value="Nasinu Campus">Nasinu Campus</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -237,7 +238,7 @@
                                                                 <span class="text-format-content">
                                                                     Programme Name. <br />
                                                                     Example 1. Bachelor of Commerce; <br />
-                                                                    Example 2. Certificate IV in Electrical Engineering.
+                                                                    Example 2. Executive Master of Business Administration
                                                                 </span>
                                                                 <span class="required-star"></span>
                                                             </div>
@@ -288,7 +289,7 @@
                                                                         <td class="office-form-matrix-ptd" id="question121-col-2"  style="vertical-align: top;">
                                                                             <span><span class="text-format-content">Disagree</span></span>
                                                                         </td>
-                                                                        <td class="office-form-matrix-ptd" id="question121-col-3"  style="vertical-align: top;">
+                                                                        <td class="office-form-matrix-ptd" id="question121-col-3"  style="vertical-align: top; display:none;">
                                                                             <span><span class="text-format-content">Neutral</span></span>
                                                                         </td>
                                                                         <td class="office-form-matrix-ptd" id="question121-col-4"  style="vertical-align: top;">
@@ -302,7 +303,7 @@
                                                                 <tbody class="office-form-matrix-stbody">
                                                                     <tr class="office-form-matrix-str" role="radiogroup">
                                                                         <td class="office-form-matrix-std" role="presentation">
-                                                                            <span class="office-form-matrix-subquestion" id="question121-row-1"><span class="text-format-content">Course outline was provided and followed.</span></span>
+                                                                            <span class="office-form-matrix-subquestion" id="question121-row-1"><span class="text-format-content">Course outline/ descriptor was clear.</span></span>
                                                                         </td>
                                                                         <td class="office-form-matrix-radio" role="presentation">
                                                                             <label class="office-form-matrix-label">
@@ -330,7 +331,7 @@
                                                                                 />
                                                                             </label>
                                                                         </td>
-                                                                        <td class="office-form-matrix-radio" role="presentation">
+                                                                        <td class="office-form-matrix-radio" role="presentation" style="display:none;">
                                                                             <label class="office-form-matrix-label">
                                                                                 <input
                                                                                     aria-checked="false"
@@ -373,7 +374,7 @@
                                                                     <tr class="office-form-matrix-str" role="radiogroup">
                                                                         <td class="office-form-matrix-std" role="presentation">
                                                                             <span class="office-form-matrix-subquestion" id="question121-row-2">
-                                                                                <span class="text-format-content">The course moved smoothly through the content and it was evident how content was linked together.</span>
+                                                                                <span class="text-format-content">The course content indicated in the course outline/ descriptor was covered thoroughly.</span>
                                                                             </span>
                                                                         </td>
                                                                         <td class="office-form-matrix-radio" role="presentation">
@@ -402,7 +403,7 @@
                                                                                 />
                                                                             </label>
                                                                         </td>
-                                                                        <td class="office-form-matrix-radio" role="presentation">
+                                                                        <td class="office-form-matrix-radio" role="presentation" style="display: none;">
                                                                             <label class="office-form-matrix-label">
                                                                                 <input
                                                                                     aria-checked="false"
@@ -445,7 +446,7 @@
                                                                     <tr class="office-form-matrix-str" role="radiogroup">
                                                                         <td class="office-form-matrix-std" role="presentation">
                                                                             <span class="office-form-matrix-subquestion" id="question121-row-3">
-                                                                                <span class="text-format-content">&nbsp;I have received feedback on assessment task(s) which will support my progression.&nbsp;</span>
+                                                                                <span class="text-format-content">&nbsp;I had a clear understanding of the course learning outcomes. &nbsp;</span>
                                                                             </span>
                                                                         </td>
                                                                         <td class="office-form-matrix-radio" role="presentation">
@@ -474,7 +475,7 @@
                                                                                 />
                                                                             </label>
                                                                         </td>
-                                                                        <td class="office-form-matrix-radio" role="presentation">
+                                                                        <td class="office-form-matrix-radio" role="presentation" style="display: none;">
                                                                             <label class="office-form-matrix-label">
                                                                                 <input
                                                                                     aria-checked="false"
@@ -514,6 +515,148 @@
                                                                             </label>
                                                                         </td>
                                                                     </tr>
+                                                                    <tr class="office-form-matrix-str" role="radiogroup">
+                                                                        <td class="office-form-matrix-std" role="presentation">
+                                                                            <span class="office-form-matrix-subquestion" id="question121-row-33">
+                                                                                <span class="text-format-content">&nbsp;I received timely feedback on the assessment tasks(s) &nbsp;</span>
+                                                                            </span>
+                                                                        </td>
+                                                                        <td class="office-form-matrix-radio" role="presentation">
+                                                                            <label class="office-form-matrix-label">
+                                                                                <input
+                                                                                    aria-checked="false"
+                                                                                    aria-posinset="1"
+                                                                                    aria-setsize="5"
+                                                                                    name="lab_q1"
+                                                                                    type="radio"
+                                                                                    
+                                                                                    value="0"
+                                                                                />
+                                                                            </label>
+                                                                        </td>
+                                                                        <td class="office-form-matrix-radio" role="presentation">
+                                                                            <label class="office-form-matrix-label">
+                                                                                <input
+                                                                                    aria-checked="false"
+                                                                                    aria-posinset="2"
+                                                                                    aria-setsize="5"
+                                                                                    name="lab_q1"
+                                                                                    type="radio"
+                                                                                    
+                                                                                    value="1"
+                                                                                />
+                                                                            </label>
+                                                                        </td>
+                                                                        <td class="office-form-matrix-radio" role="presentation" style="display: none;">
+                                                                            <label class="office-form-matrix-label">
+                                                                                <input
+                                                                                    aria-checked="false"
+                                                                                    aria-posinset="3"
+                                                                                    aria-setsize="5"
+                                                                                    name="lab_q1"
+                                                                                    type="radio"
+                                                                                    
+                                                                                    value="2"
+                                                                                />
+                                                                            </label>
+                                                                        </td>
+                                                                        <td class="office-form-matrix-radio" role="presentation">
+                                                                            <label class="office-form-matrix-label">
+                                                                                <input
+                                                                                    aria-checked="false"
+                                                                                    aria-posinset="4"
+                                                                                    aria-setsize="5"
+                                                                                    name="lab_q1"
+                                                                                    type="radio"
+                                                                                    
+                                                                                    value="3"
+                                                                                />
+                                                                            </label>
+                                                                        </td>
+                                                                        <td class="office-form-matrix-radio" role="presentation">
+                                                                            <label class="office-form-matrix-label">
+                                                                                <input
+                                                                                    aria-checked="false"
+                                                                                    aria-posinset="5"
+                                                                                    aria-setsize="5"
+                                                                                    name="lab_q1"
+                                                                                    type="radio"
+                                                                                    
+                                                                                    value="4"
+                                                                                />
+                                                                            </label>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="office-form-matrix-str" role="radiogroup">
+                                                                        <td class="office-form-matrix-std" role="presentation">
+                                                                            <span class="office-form-matrix-subquestion" id="question122-row-1"><span class="text-format-content">Overall, I had a good learning experiance in the course.</span></span>
+                                                                        </td>
+                                                                        <td class="office-form-matrix-radio" role="presentation">
+                                                                            <label class="office-form-matrix-label">
+                                                                                <input
+                                                                                    aria-checked="false"
+                                                                                    aria-posinset="1"
+                                                                                    aria-setsize="5"
+                                                                                    name="teacher_q1"
+                                                                                    type="radio"
+                                                                                    
+                                                                                    value="0"
+                                                                                />
+                                                                            </label>
+                                                                        </td>
+                                                                        <td class="office-form-matrix-radio" role="presentation">
+                                                                            <label class="office-form-matrix-label">
+                                                                                <input
+                                                                                    aria-checked="false"
+                                                                                    aria-posinset="2"
+                                                                                    aria-setsize="5"
+                                                                                    name="teacher_q1"
+                                                                                    type="radio"
+                                                                                    
+                                                                                    value="1"
+                                                                                />
+                                                                            </label>
+                                                                        </td>
+                                                                        <td class="office-form-matrix-radio" role="presentation" style="display: none;">
+                                                                            <label class="office-form-matrix-label">
+                                                                                <input
+                                                                                    aria-checked="false"
+                                                                                    aria-posinset="3"
+                                                                                    aria-setsize="5"
+                                                                                    name="teacher_q1"
+                                                                                    type="radio"
+                                                                                    
+                                                                                    value="2"
+                                                                                />
+                                                                            </label>
+                                                                        </td>
+                                                                        <td class="office-form-matrix-radio" role="presentation">
+                                                                            <label class="office-form-matrix-label">
+                                                                                <input
+                                                                                    aria-checked="false"
+                                                                                    aria-posinset="4"
+                                                                                    aria-setsize="5"
+                                                                                    name="teacher_q1"
+                                                                                    type="radio"
+                                                                                    
+                                                                                    value="3"
+                                                                                />
+                                                                            </label>
+                                                                        </td>
+                                                                        <td class="office-form-matrix-radio" role="presentation">
+                                                                            <label class="office-form-matrix-label">
+                                                                                <input
+                                                                                    aria-checked="false"
+                                                                                    aria-posinset="5"
+                                                                                    aria-setsize="5"
+                                                                                    name="teacher_q1"
+                                                                                    type="radio"
+                                                                                    
+                                                                                    value="4"
+                                                                                />
+                                                                            </label>
+                                                                        </td>
+                                                                    </tr>
                                                                 </tbody>
                                                             </table>
                                                         </div>
@@ -545,7 +688,7 @@
                                                                     <td class="office-form-matrix-ptd" id="question122-col-2" style="vertical-align: top;">
                                                                         <span><span class="text-format-content">Disagree</span></span>
                                                                     </td>
-                                                                    <td class="office-form-matrix-ptd" id="question122-col-3" style="vertical-align: top;">
+                                                                    <td class="office-form-matrix-ptd" id="question122-col-3" style="vertical-align: top; display:none;">
                                                                         <span><span class="text-format-content">Neutral</span></span>
                                                                     </td>
                                                                     <td class="office-form-matrix-ptd" id="question122-col-4" style="vertical-align: top;">
@@ -557,80 +700,11 @@
                                                                 </tr>
                                                             </thead>
                                                             <tbody class="office-form-matrix-stbody">
-                                                                <tr class="office-form-matrix-str" role="radiogroup">
-                                                                    <td class="office-form-matrix-std" role="presentation">
-                                                                        <span class="office-form-matrix-subquestion" id="question122-row-1"><span class="text-format-content">The teaching team were well prepared and organised for classes.</span></span>
-                                                                    </td>
-                                                                    <td class="office-form-matrix-radio" role="presentation">
-                                                                        <label class="office-form-matrix-label">
-                                                                            <input
-                                                                                aria-checked="false"
-                                                                                aria-posinset="1"
-                                                                                aria-setsize="5"
-                                                                                name="teacher_q1"
-                                                                                type="radio"
-                                                                                
-                                                                                value="0"
-                                                                            />
-                                                                        </label>
-                                                                    </td>
-                                                                    <td class="office-form-matrix-radio" role="presentation">
-                                                                        <label class="office-form-matrix-label">
-                                                                            <input
-                                                                                aria-checked="false"
-                                                                                aria-posinset="2"
-                                                                                aria-setsize="5"
-                                                                                name="teacher_q1"
-                                                                                type="radio"
-                                                                                
-                                                                                value="1"
-                                                                            />
-                                                                        </label>
-                                                                    </td>
-                                                                    <td class="office-form-matrix-radio" role="presentation">
-                                                                        <label class="office-form-matrix-label">
-                                                                            <input
-                                                                                aria-checked="false"
-                                                                                aria-posinset="3"
-                                                                                aria-setsize="5"
-                                                                                name="teacher_q1"
-                                                                                type="radio"
-                                                                                
-                                                                                value="2"
-                                                                            />
-                                                                        </label>
-                                                                    </td>
-                                                                    <td class="office-form-matrix-radio" role="presentation">
-                                                                        <label class="office-form-matrix-label">
-                                                                            <input
-                                                                                aria-checked="false"
-                                                                                aria-posinset="4"
-                                                                                aria-setsize="5"
-                                                                                name="teacher_q1"
-                                                                                type="radio"
-                                                                                
-                                                                                value="3"
-                                                                            />
-                                                                        </label>
-                                                                    </td>
-                                                                    <td class="office-form-matrix-radio" role="presentation">
-                                                                        <label class="office-form-matrix-label">
-                                                                            <input
-                                                                                aria-checked="false"
-                                                                                aria-posinset="5"
-                                                                                aria-setsize="5"
-                                                                                name="teacher_q1"
-                                                                                type="radio"
-                                                                                
-                                                                                value="4"
-                                                                            />
-                                                                        </label>
-                                                                    </td>
-                                                                </tr>
+                                                               
                                                                 <tr class="office-form-matrix-str" role="radiogroup">
                                                                     <td class="office-form-matrix-std" role="presentation">
                                                                         <span class="office-form-matrix-subquestion" id="question122-row-2">
-                                                                            <span class="text-format-content">The teaching team encouraged me to participate in discussions (eg Face to Face and in Moodle and Moodle Discussion Forum).</span>
+                                                                            <span class="text-format-content">Consultation sessions with relevant person(s) were provided. </span>
                                                                         </span>
                                                                     </td>
                                                                     <td class="office-form-matrix-radio" role="presentation">
@@ -659,7 +733,7 @@
                                                                             />
                                                                         </label>
                                                                     </td>
-                                                                    <td class="office-form-matrix-radio" role="presentation">
+                                                                    <td class="office-form-matrix-radio" role="presentation" style="display: none;">
                                                                         <label class="office-form-matrix-label">
                                                                             <input
                                                                                 aria-checked="false"
@@ -701,7 +775,7 @@
                                                                 </tr>
                                                                 <tr class="office-form-matrix-str" role="radiogroup">
                                                                     <td class="office-form-matrix-std" role="presentation">
-                                                                        <span class="office-form-matrix-subquestion" id="question122-row-3"><span class="text-format-content">The teaching team was&nbsp; professional in their approach.</span></span>
+                                                                        <span class="office-form-matrix-subquestion" id="question122-row-4"><span class="text-format-content">The lecturer and teaching support team were understood clearly.</span></span>
                                                                     </td>
                                                                     <td class="office-form-matrix-radio" role="presentation">
                                                                         <label class="office-form-matrix-label">
@@ -709,7 +783,7 @@
                                                                                 aria-checked="false"
                                                                                 aria-posinset="1"
                                                                                 aria-setsize="5"
-                                                                                name="teacher_q3"
+                                                                                name="teacher_q4"
                                                                                 type="radio"
                                                                                 
                                                                                 value="0"
@@ -722,20 +796,20 @@
                                                                                 aria-checked="false"
                                                                                 aria-posinset="2"
                                                                                 aria-setsize="5"
-                                                                                name="teacher_q3"
+                                                                                name="teacher_q4"
                                                                                 type="radio"
                                                                                 
                                                                                 value="1"
                                                                             />
                                                                         </label>
                                                                     </td>
-                                                                    <td class="office-form-matrix-radio" role="presentation">
+                                                                    <td class="office-form-matrix-radio" role="presentation" style="display: none;">
                                                                         <label class="office-form-matrix-label">
                                                                             <input
                                                                                 aria-checked="false"
                                                                                 aria-posinset="3"
                                                                                 aria-setsize="5"
-                                                                                name="teacher_q3"
+                                                                                name="teacher_q4"
                                                                                 type="radio"
                                                                                 
                                                                                 value="2"
@@ -748,7 +822,7 @@
                                                                                 aria-checked="false"
                                                                                 aria-posinset="4"
                                                                                 aria-setsize="5"
-                                                                                name="teacher_q3"
+                                                                                name="teacher_q4"
                                                                                 type="radio"
                                                                                 
                                                                                 value="3"
@@ -761,7 +835,7 @@
                                                                                 aria-checked="false"
                                                                                 aria-posinset="5"
                                                                                 aria-setsize="5"
-                                                                                name="teacher_q3"
+                                                                                name="teacher_q4"
                                                                                 type="radio"
                                                                                 
                                                                                 value="4"
@@ -771,7 +845,7 @@
                                                                 </tr>
                                                                 <tr class="office-form-matrix-str" role="radiogroup">
                                                                     <td class="office-form-matrix-std" role="presentation">
-                                                                        <span class="office-form-matrix-subquestion" id="question122-row-4"><span class="text-format-content">Appropriate consultation was provided by designated staff.</span></span>
+                                                                        <span class="office-form-matrix-subquestion" id="question122-row-3"><span class="text-format-content">Overall, i am satisfied with the teaching team's performance</span></span>
                                                                     </td>
                                                                     <td class="office-form-matrix-radio" role="presentation">
                                                                         <label class="office-form-matrix-label">
@@ -779,7 +853,7 @@
                                                                                 aria-checked="false"
                                                                                 aria-posinset="1"
                                                                                 aria-setsize="5"
-                                                                                name="teacher_q4"
+                                                                                name="teacher_q3"
                                                                                 type="radio"
                                                                                 
                                                                                 value="0"
@@ -792,20 +866,20 @@
                                                                                 aria-checked="false"
                                                                                 aria-posinset="2"
                                                                                 aria-setsize="5"
-                                                                                name="teacher_q4"
+                                                                                name="teacher_q3"
                                                                                 type="radio"
                                                                                 
                                                                                 value="1"
                                                                             />
                                                                         </label>
                                                                     </td>
-                                                                    <td class="office-form-matrix-radio" role="presentation">
+                                                                    <td class="office-form-matrix-radio" role="presentation" style="display: none;">
                                                                         <label class="office-form-matrix-label">
                                                                             <input
                                                                                 aria-checked="false"
                                                                                 aria-posinset="3"
                                                                                 aria-setsize="5"
-                                                                                name="teacher_q4"
+                                                                                name="teacher_q3"
                                                                                 type="radio"
                                                                                 
                                                                                 value="2"
@@ -818,7 +892,7 @@
                                                                                 aria-checked="false"
                                                                                 aria-posinset="4"
                                                                                 aria-setsize="5"
-                                                                                name="teacher_q4"
+                                                                                name="teacher_q3"
                                                                                 type="radio"
                                                                                 
                                                                                 value="3"
@@ -831,7 +905,7 @@
                                                                                 aria-checked="false"
                                                                                 aria-posinset="5"
                                                                                 aria-setsize="5"
-                                                                                name="teacher_q4"
+                                                                                name="teacher_q3"
                                                                                 type="radio"
                                                                                 
                                                                                 value="4"
@@ -847,7 +921,7 @@
                                         </div>
                                     </div>
                                     <br/>
-                                    <div class="row">
+                                    <div class="row" style="display:none;">
                                         <div class="col col-sm-12">
                                             <div class="__question__ office-form-question" data-id="rf849ceb1705e43d284538cc4af4b7996">
                                                 <div class="question-coAuthor-notification-container-render-mode" aria-live="polite"></div>
@@ -855,36 +929,36 @@
                                                     <div class="question-title-box">
                                                         <div>
                                                             <div class="office-form-question-title" id="question123-title">
-                                                                <span class="ordinal-number">10.</span><span class="text-format-content">  The teaching team was available for consultation through: (multiple options can be selected)* </span><span class="required-star"></span>
+                                                                <span class="ordinal-number">10.</span><span class="text-format-content">  The teaching team was available for consultation through: *</span><span class="required-star"></span>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="office-form-question-element">
-                                                        <div role="checkboxgroup" class="col">
+                                                        <div role="radiogroup">
                                                             <div class="office-form-question-choice">
-                                                                <div class="checkbox">
+                                                                <div class="radio">
                                                                     <label class="office-form-question-choice-row office-form-question-choice-text-row">
-                                                                        <input aria-checked="false" aria-label="Face to Face" type="checkbox" name="chk_consultation" aria-posinset="1" aria-setsize="4" value="Face to Face" />
+                                                                        <input aria-checked="false" aria-label="Face to Face" type="radio" name="rdo_consultation" aria-posinset="1" aria-setsize="4" value="Face to Face" />
                                                                         <span class="office-form-question-choice-text-span"><span class="text-format-content">Face to Face</span></span>
                                                                     </label>
                                                                 </div>
                                                             </div>
                                                             <div class="office-form-question-choice">
-                                                                <div class="checkbox">
+                                                                <div class="radio">
                                                                     <label class="office-form-question-choice-row office-form-question-choice-text-row">
-                                                                        <input aria-checked="false" aria-label="Email" type="checkbox" name="chk_consultation" aria-posinset="2" aria-setsize="4" value="Email" />
+                                                                        <input aria-checked="false" aria-label="Email" type="radio" name="rdo_consultation" aria-posinset="2" aria-setsize="4" value="Email" />
                                                                         <span class="office-form-question-choice-text-span"><span class="text-format-content">Email</span></span>
                                                                     </label>
                                                                 </div>
                                                             </div>
                                                             <div class="office-form-question-choice">
-                                                                <div class="checkbox">
+                                                                <div class="radio">
                                                                     <label class="office-form-question-choice-row office-form-question-choice-text-row">
                                                                         <input
                                                                             aria-checked="false"
                                                                             aria-label="Telephone/ mobile phone/ social media"
-                                                                            type="checkbox"
-                                                                            name="chk_consultation"
+                                                                            type="radio"
+                                                                            name="rdo_consultation"
                                                                             aria-posinset="3"
                                                                             aria-setsize="4"
                                                                             value="Telephone/ mobile phone/ social media"
@@ -894,9 +968,9 @@
                                                                 </div>
                                                             </div>
                                                             <div class="office-form-question-choice">
-                                                                <div class="checkbox">
+                                                                <div class="radio">
                                                                     <label class="office-form-question-choice-row office-form-question-choice-text-row">
-                                                                        <input aria-checked="false" aria-label="Moodle" type="checkbox" name="chk_consultation" aria-posinset="4" aria-setsize="4" value="Moodle" />
+                                                                        <input aria-checked="false" aria-label="Moodle" type="radio" name="rdo_consultation" aria-posinset="4" aria-setsize="4" value="Moodle" />
                                                                         <span class="office-form-question-choice-text-span"><span class="text-format-content">Moodle</span></span>
                                                                     </label>
                                                                 </div>
@@ -907,14 +981,13 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <br/>
-                                    <div class="row">
+                                    <div class="row" style="display: none;">
                                         <div class="col col-sm-12">
                                             <div class="office-form-question-content office-form-theme-focus-border">
                                                 <div class="question-title-box">
                                                     <div>
                                                         <div class="office-form-question-title" id="question124-title">
-                                                            <span class="ordinal-number">11.</span><span class="text-format-content">  The Learning Outcomes *</span><span class="required-star"></span>
+                                                            <span class="ordinal-number">10.</span><span class="text-format-content">  The Learning Outcomes *</span><span class="required-star"></span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -930,7 +1003,7 @@
                                                                     <td class="office-form-matrix-ptd" id="question124-col-2" style="vertical-align: top;">
                                                                         <span><span class="text-format-content">Disagree</span></span>
                                                                     </td>
-                                                                    <td class="office-form-matrix-ptd" id="question124-col-3" style="vertical-align: top;">
+                                                                    <td class="office-form-matrix-ptd" id="question124-col-3" style="vertical-align: top; display:none;">
                                                                         <span><span class="text-format-content">Neutral</span></span>
                                                                     </td>
                                                                     <td class="office-form-matrix-ptd" id="question124-col-4" style="vertical-align: top;">
@@ -1097,7 +1170,7 @@
                                                     <div class="question-title-box">
                                                         <div>
                                                             <div class="office-form-question-title" id="question125-title">
-                                                                <span class="ordinal-number">12.</span><span class="text-format-content">  The course consists of Labs/ Practicals/ Workshops. *</span><span class="required-star"></span>
+                                                                <span class="ordinal-number">10.</span><span class="text-format-content">  The course consists of Labs/ Practical's/ Workshops. *</span><span class="required-star"></span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1136,9 +1209,9 @@
                                                 <div class="question-title-box">
                                                     <div>
                                                         <div class="office-form-question-title" id="question154-title">
-                                                            <span class="ordinal-number d_num">13.</span><span class="text-format-content">  Labs/ Practicals/ Workshops *</span><span class="required-star"></span>
+                                                            <span class="ordinal-number d_num">11.</span><span class="text-format-content">  Labs/ Practical's/ Workshops *</span><span class="required-star"></span>
                                                         </div>
-                                                        <div class="office-form-question-subtitle" id="question154-subtitle"><span class="text-format-content">(Only for students with Labs/ Practicals/ Workshop component)</span></div>
+                                                        <div class="office-form-question-subtitle" id="question154-subtitle"><span class="text-format-content">(Only for students with Labs/ Practical's/ Workshop component)</span></div>
                                                     </div>
                                                 </div>
                                                 <div class="office-form-question-element">
@@ -1153,7 +1226,7 @@
                                                                     <td class="office-form-matrix-ptd" id="question154-col-2" style="vertical-align: top;">
                                                                         <span><span class="text-format-content">Disagree</span></span>
                                                                     </td>
-                                                                    <td class="office-form-matrix-ptd" id="question154-col-3" style="vertical-align: top;">
+                                                                    <td class="office-form-matrix-ptd" id="question154-col-3" style="vertical-align: top; display:none;">
                                                                         <span><span class="text-format-content">Neutral</span></span>
                                                                     </td>
                                                                     <td class="office-form-matrix-ptd" id="question154-col-4" style="vertical-align: top;">
@@ -1165,39 +1238,39 @@
                                                                 </tr>
                                                             </thead>
                                                             <tbody class="office-form-matrix-stbody">
-                                                                <tr class="office-form-matrix-str" role="radiogroup">
+                                                                <tr class="office-form-matrix-str" role="radiogroup" style="display: none;">
                                                                     <td class="office-form-matrix-std" role="presentation">
-                                                                        <span class="office-form-matrix-subquestion" id="question154-row-1"><span class="text-format-content">Labs/ Practicals/ Workshop guidelines were clearly given before the assigned sessions.</span></span>
+                                                                        <span class="office-form-matrix-subquestion" id="question154-row-1"><span class="text-format-content">Labs/ Practical's/ Workshop guidelines were clearly given before the assigned sessions.</span></span>
                                                                     </td>
                                                                     <td class="office-form-matrix-radio" role="presentation">
                                                                         <label class="office-form-matrix-label">
-                                                                            <input aria-checked="false" aria-labelledby="question154-row-1 question154-col-1" aria-posinset="1" aria-setsize="5" name="lab_q1" type="radio" role="radio" value="0">
+                                                                            <input aria-checked="false" aria-labelledby="question154-row-1 question154-col-1" aria-posinset="1" aria-setsize="5" name="lab_q1_old" type="radio" role="radio" value="0">
                                                                         </label>
                                                                     </td>
                                                                     <td class="office-form-matrix-radio" role="presentation">
                                                                         <label class="office-form-matrix-label">
-                                                                            <input aria-checked="false" aria-labelledby="question154-row-1 question154-col-2" aria-posinset="2" aria-setsize="5" name="lab_q1" type="radio" role="radio" value="1">
+                                                                            <input aria-checked="false" aria-labelledby="question154-row-1 question154-col-2" aria-posinset="2" aria-setsize="5" name="lab_q1_old" type="radio" role="radio" value="1">
                                                                         </label>
                                                                     </td>
                                                                     <td class="office-form-matrix-radio" role="presentation">
                                                                         <label class="office-form-matrix-label">
-                                                                            <input aria-checked="false" aria-labelledby="question154-row-1 question154-col-3" aria-posinset="3" aria-setsize="5" name="lab_q1" type="radio" role="radio" value="2">
+                                                                            <input aria-checked="false" aria-labelledby="question154-row-1 question154-col-3" aria-posinset="3" aria-setsize="5" name="lab_q1_old" type="radio" role="radio" value="2">
                                                                         </label>
                                                                     </td>
                                                                     <td class="office-form-matrix-radio" role="presentation">
                                                                         <label class="office-form-matrix-label">
-                                                                            <input aria-checked="false" aria-labelledby="question154-row-1 question154-col-4" aria-posinset="4" aria-setsize="5" name="lab_q1" type="radio" role="radio" value="3">
+                                                                            <input aria-checked="false" aria-labelledby="question154-row-1 question154-col-4" aria-posinset="4" aria-setsize="5" name="lab_q1_old" type="radio" role="radio" value="3">
                                                                         </label>
                                                                     </td>
                                                                     <td class="office-form-matrix-radio" role="presentation">
                                                                         <label class="office-form-matrix-label">
-                                                                            <input aria-checked="false" aria-labelledby="question154-row-1 question154-col-5" aria-posinset="5" aria-setsize="5" name="lab_q1" type="radio" role="radio" value="4">
+                                                                            <input aria-checked="false" aria-labelledby="question154-row-1 question154-col-5" aria-posinset="5" aria-setsize="5" name="lab_q1_old" type="radio" role="radio" value="4">
                                                                         </label>
                                                                     </td>
                                                                 </tr>
-                                                                <tr class="office-form-matrix-str" role="radiogroup">
+                                                                <tr class="office-form-matrix-str" role="radiogroup" style="display: none;">
                                                                     <td class="office-form-matrix-std" role="presentation">
-                                                                        <span class="office-form-matrix-subquestion" id="question154-row-2"><span class="text-format-content">I received appropriate guidance/ assistance during Labs/ Practicals /Workshop classes.</span></span>
+                                                                        <span class="office-form-matrix-subquestion" id="question154-row-2"><span class="text-format-content">I received appropriate guidance/ assistance during Labs/ Practical's /Workshop classes.</span></span>
                                                                     </td>
                                                                     <td class="office-form-matrix-radio" role="presentation">
                                                                         <label class="office-form-matrix-label">
@@ -1227,7 +1300,7 @@
                                                                 </tr>
                                                                 <tr class="office-form-matrix-str" role="radiogroup">
                                                                     <td class="office-form-matrix-std" role="presentation">
-                                                                        <span class="office-form-matrix-subquestion" id="question154-row-3"><span class="text-format-content">Overall, I am satisfied with Labs/ Practicals/ Workshop component of this course.</span></span>
+                                                                        <span class="office-form-matrix-subquestion" id="question154-row-3"><span class="text-format-content">Overall, I am satisfied with Activities/ Labs/ Practicals/ Workshop component of this course.</span></span>
                                                                     </td>
                                                                     <td class="office-form-matrix-radio" role="presentation">
                                                                         <label class="office-form-matrix-label">
@@ -1239,7 +1312,7 @@
                                                                             <input aria-checked="false" aria-labelledby="question154-row-3 question154-col-2" aria-posinset="2" aria-setsize="5" name="lab_q3" type="radio" role="radio" value="1">
                                                                         </label>
                                                                     </td>
-                                                                    <td class="office-form-matrix-radio" role="presentation">
+                                                                    <td class="office-form-matrix-radio" role="presentation" style="display: none;">
                                                                         <label class="office-form-matrix-label">
                                                                             <input aria-checked="false" aria-labelledby="question154-row-3 question154-col-3" aria-posinset="3" aria-setsize="5" name="lab_q3" type="radio" role="radio" value="2">
                                                                         </label>
@@ -1330,7 +1403,7 @@
                                                                         <td class="office-form-matrix-ptd" id="question41-col-2">
                                                                             <span><span class="text-format-content">Disagree</span></span>
                                                                         </td>
-                                                                        <td class="office-form-matrix-ptd" id="question41-col-3">
+                                                                        <td class="office-form-matrix-ptd" id="question41-col-3" style="display:none;">
                                                                             <span><span class="text-format-content">Neutral</span></span>
                                                                         </td>
                                                                         <td class="office-form-matrix-ptd" id="question41-col-4">
@@ -1342,7 +1415,7 @@
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody class="office-form-matrix-stbody">
-                                                                    <tr class="office-form-matrix-str" role="radiogroup">
+                                                                    <tr class="office-form-matrix-str" role="radiogroup" style="display: none;">
                                                                         <td class="office-form-matrix-std" role="presentation">
                                                                             <span class="office-form-matrix-subquestion" id="question41-row-1">
                                                                                 <span class="text-format-content"><span>I gained sufficient skills in preparation for Clinical Attachment/ Community Visit.</span></span>
@@ -1419,7 +1492,7 @@
                                                                             </label>
                                                                         </td>
                                                                     </tr>
-                                                                    <tr class="office-form-matrix-str" role="radiogroup">
+                                                                    <tr class="office-form-matrix-str" role="radiogroup" style="display: none;">
                                                                         <td class="office-form-matrix-std" role="presentation">
                                                                             <span class="office-form-matrix-subquestion" id="question41-row-2">
                                                                                 <span class="text-format-content"><span>Learning resources were provided to access Clinical Attachment/ Community Visit needs.</span></span>
@@ -1496,7 +1569,7 @@
                                                                             </label>
                                                                         </td>
                                                                     </tr>
-                                                                    <tr class="office-form-matrix-str" role="radiogroup">
+                                                                    <tr class="office-form-matrix-str" role="radiogroup" style="display: none;">
                                                                         <td class="office-form-matrix-std" role="presentation">
                                                                             <span class="office-form-matrix-subquestion" id="question41-row-3">
                                                                                 <span class="text-format-content"><span>I learnt to establish a professional attitude and working relationship with clients e.g. patients and Ministry of Health staff.</span></span>
@@ -1660,7 +1733,7 @@
                                         </div>
                                     </div>
                                                         
-                                    <div class="row d_num_row" style="display:block">
+                                    <div class="row d_num_row" style="display:none">
                                         <div class="col col-sm-12">
                                             <div class="office-form-question-content office-form-theme-focus-border">
                                                 <div class="question-title-box">
@@ -1682,7 +1755,7 @@
                                                                     <td class="office-form-matrix-ptd" id="question155-col-2" style="vertical-align: top;">
                                                                         <span><span class="text-format-content">Disagree</span></span>
                                                                     </td>
-                                                                    <td class="office-form-matrix-ptd" id="question155-col-3" style="vertical-align: top;">
+                                                                    <td class="office-form-matrix-ptd" id="question155-col-3" style="vertical-align: top; display:none;">
                                                                         <span><span class="text-format-content">Neutral</span></span>
                                                                     </td>
                                                                     <td class="office-form-matrix-ptd" id="question155-col-4" style="vertical-align: top;">
@@ -1800,7 +1873,7 @@
     </div>
 
     <script type="text/javascript">
-        //Author : Avishek Ram Copyright 20222
+        //Author : Avishek Ram Copyright 2022
         //Department of Research & Education Enabling Technology, FNU.
         
         (function mymain(){
@@ -1888,7 +1961,7 @@
                     }
                 });
                 
-                var qindex = 13;
+                var qindex = 11;
                 $(active_elements).each(function(index,ele){
                     $(ele).html(qindex + ".");
                     qindex++; 
@@ -1927,8 +2000,8 @@
         
         $("#college_select").on('change', function(){
 
-            var cmnhs_campuses = ["McGregor Campus/ Lautoka","Nursing Campus/ Tamavua","Pasifika Campus","Public Health Campus/ Tamavua"];
-            var non_cmnhs_campus = ["Namaka Campus/ Hospitality and Tourism Campus", "Nasese Campus"];
+            var cmnhs_campuses = ["Pasifika Campus","Tamavua Campus", "Hoodless House"];
+            var non_cmnhs_campus = ["Namaka Campus", "Nasese Campus" , "Nasinu Campus"];
             var selected_college = $("#college_select :selected").val();
             if(selected_college == "CMNHS"){
                 $("#clinical_row_bool").css("display","block");
@@ -1940,7 +2013,7 @@
                     }
                 });
 
-                var qindex = 13;
+                var qindex = 11;
                 $(active_elements).each(function(index,ele){
                     $(ele).html(qindex + ".");
                     qindex++; 
@@ -1976,7 +2049,7 @@
                     }
                 });
                 
-                var qindex = 13;
+                var qindex = 11;
                 $(active_elements).each(function(index,ele){
                     $(ele).html(qindex + ".");
                     qindex++; 
@@ -2017,7 +2090,7 @@
                     }
                 });
                 
-                var qindex = 13;
+                var qindex = 11;
                 $(active_elements).each(function(index,ele){
                     $(ele).html(qindex + ".");
                     qindex++; 
@@ -2032,22 +2105,13 @@
                     }
                 });
                 
-                var qindex = 13;
+                var qindex = 11;
                 $(active_elements).each(function(index,ele){
                     $(ele).html(qindex + ".");
                     qindex++; 
                 });
             }
         });
-
-        function getConsultaions(){ 
-            var resp = [];
-            $("[name=chk_consultation]:checked").each((index,ele)=>
-            {
-                resp.push($(ele).val());
-            });
-            return resp.toString();
-        }; 
 
         $('[name="has_labs"]').on('change', function(){
             var opt_selected = $('[name="has_labs"]:checked').val(); 
@@ -2061,7 +2125,7 @@
                     }
                 });
                 
-                var qindex = 13;
+                var qindex = 11;
                 $(active_elements).each(function(index,ele){
                     $(ele).html(qindex + ".");
                     qindex++; 
@@ -2076,7 +2140,7 @@
                     }
                 });
                 
-                var qindex = 13;
+                var qindex = 11;
                 $(active_elements).each(function(index,ele){
                     $(ele).html(qindex + ".");
                     qindex++; 
@@ -2147,7 +2211,7 @@
             var teacher_q3 = $('[name="teacher_q3"]:checked').val();
             var teacher_q4 = $('[name="teacher_q4"]:checked').val();
 
-            var consultation = getConsultaions();
+            var consultation = $('[name="rdo_consultation"]:checked').val();
 
             var outcome_q1 = $('[name="outcome_q1"]:checked').val();
             var outcome_q2 = $('[name="outcome_q2"]:checked').val();
@@ -2173,8 +2237,7 @@
             //all essential questions should be answered - check here
             if(!age || !gender || !is_first_year || !campus || !college ||
                 !course || !course_q1 || !course_q2 || !course_q3 ||
-                !teacher_q1 ||  !teacher_q2 || !teacher_q3 || !teacher_q4 || !consultation ||
-                !outcome_q1 || !outcome_q2 || !has_labs || !overall_q1 || !overall_q2)
+                !teacher_q1 || !teacher_q3 || !teacher_q4 || !has_labs)
             {
                 swal({
                     title: "Form Incomplete!",
@@ -2184,7 +2247,7 @@
             }else{
                  //check optional questions should be answered if boolean true
                 if(has_labs == "Yes"){
-                    if(!lab_q1 || !lab_q2 || !lab_q3){
+                    if(!lab_q3){
                         swal({
                             title: "Form Incomplete!",
                             text: "Please Ensure Form is Completed",
@@ -2194,7 +2257,7 @@
                     }
                 }
                 else{
-                    lab_q1 = null;
+                    //lab_q1 = null;
                     lab_q2 = null;
                     lab_q3 = null;
                 }  
@@ -2208,7 +2271,7 @@
                         return;
                     }
                     
-                    if(has_clinicals == "Yes" && (!clinical_q1 || !clinical_q2 || !clinical_q3 || !clinical_q4)){
+                    if(has_clinicals == "Yes" && !clinical_q4){
                         swal({
                             title: "Form Incomplete!",
                             text: "Please Ensure Form is Completed",
@@ -2247,7 +2310,7 @@
                     course_q1 : get_radio_value(course_q1),
                     course_q2: get_radio_value(course_q2),
                     course_q3 : get_radio_value(course_q3),
-                    teacher_q1: get_radio_value(teacher_q1),
+                    teacher_q1: get_radio_value(teacher_q1), //teacher_q1 has now become course_q4 (new survey)
                     teacher_q2 :get_radio_value(teacher_q2),
                     teacher_q3 : get_radio_value(teacher_q3),
                     teacher_q4 : get_radio_value(teacher_q4),
@@ -2309,4 +2372,4 @@
         });
   </script>
 </body>
-</html>
+</html> 
