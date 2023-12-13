@@ -821,7 +821,7 @@
                                                 <div class="question-title-box">
                                                     <div>
                                                         <div class="office-form-question-title" id="question122-title">
-                                                            <span class="ordinal-number">10.</span><span class="text-format-content">  Accessibility & Technical Support</span><span class="required-star"></span><br/>
+                                                            <span class="ordinal-number">10.</span><span class="text-format-content">  Accessibility & Technical Support</span><span class="required-star">*</span><br/>
                                                             <span>(Please note that questions 10, 11 and 12 relate to Moodle Services)</span>
                                                         </div>
                                                     </div>
@@ -851,7 +851,7 @@
                                                                 <tr class="office-form-matrix-str" role="radiogroup">
                                                                     <td class="office-form-matrix-std" role="presentation">
                                                                         <span class="office-form-matrix-subquestion" id="question122-row-2">
-                                                                            <span class="text-format-content">Orientation for students provided information on technical support</span>
+                                                                            <span class="text-format-content">Orientation for students provided information on technical support <span class="required-star">*</span></span>
                                                                         </span>
                                                                     </td>
                                                                     <td class="office-form-matrix-radio" role="presentation">
@@ -921,7 +921,7 @@
                                                 <div class="question-title-box">
                                                     <div>
                                                         <div class="office-form-question-title" id="question122-title">
-                                                            <span class="ordinal-number">11.</span><span class="text-format-content">  Please select the options that corresponds with your opinion on accessibility to course materials. You may select more than one option</span><span class="required-star"></span><br/>
+                                                            <span class="ordinal-number">11.</span><span class="text-format-content">  Please select the options that corresponds with your opinion on accessibility to course materials. You may select more than one option</span><span class="required-star">*</span><br/>
                                                         </div>
                                                     </div>
                                                 </div><br/>
@@ -1211,11 +1211,9 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>   
-                                            <br/>                                       
+                                            </div>                                      
                                         </div>
                                     </div>
-                                    <br>
                                     <div class="row d_num_row" style="display:block">
                                         <div class="col col-sm-12">
                                             <div class="__question__ office-form-question" data-id="r8f631299ef014e98a7bb55c9e707a8dd">
@@ -1597,10 +1595,10 @@
 
             var technical_q1 = $('[name="technical_q1"]:checked').val();
 
-            var audio = $('[name="audio"]:checked').is(":checked").toString();
-            var videos = $('[name="videos"]:checked').is(":checked").toString();
-            var readings = $('[name="readings"]:checked').is(":checked").toString();
-            var recorded_lectures = $('[name="recorded_lectures"]:checked').is(":checked").toString();
+            var audio = $('[name="audio"]:checked').is(":checked");
+            var videos = $('[name="videos"]:checked').is(":checked");
+            var readings = $('[name="readings"]:checked').is(":checked");
+            var recorded_lectures = $('[name="recorded_lectures"]:checked').is(":checked");
 
             var accessibility_input = $("#accessibility_input").val();
 
@@ -1609,7 +1607,7 @@
             //all essential questions should be answered - check here
             if(!age || !gender || !is_first_year || !campus || !college ||
                 !course || !course_q1 || !course_q2 || !course_q3 || !course_q4
-                || !course_q5 || !teacher_q1 || !teacher_q2 || !teacher_q3 || !technical_q1|| !programme || !has_labs)
+                || !course_q5 || !teacher_q1 || !teacher_q2 || !teacher_q3 || !programme || !has_labs)
             {
                 swal({
                     title: "Form Incomplete!",
@@ -1618,6 +1616,15 @@
                 });
             }else{
                  //check optional questions should be answered if boolean true
+                if(!audio && !videos && !readings && !recorded_lectures ){
+                    swal({
+                            title: "Form Incomplete!",
+                            text: "Please Ensure Form is Completed",
+                            icon: "warning",
+                        });
+                        return;
+                }
+
                 if(has_labs == "Yes"){
                     if(!lab_q1){
                         swal({
@@ -1681,10 +1688,10 @@
                     teacher_q2 :get_radio_value(teacher_q2),
                     teacher_q3 : get_radio_value(teacher_q3),
                     technical_q1 : get_radio_value(technical_q1),
-                    audio : audio ?? null,
-                    videos: videos ?? null,
-                    readings: readings ?? null,
-                    recorded_lectures: recorded_lectures ?? null,
+                    audio : audio.toString() ?? null,
+                    videos: videos.toString() ?? null,
+                    readings: readings.toString() ?? null,
+                    recorded_lectures: recorded_lectures.toString() ?? null,
                     accessibility_input: accessibility_input,
                     has_labs : has_labs,
                     lab_q1 : get_radio_value(lab_q1),
