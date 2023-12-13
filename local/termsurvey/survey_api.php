@@ -67,6 +67,7 @@ if (isguestuser()) {  // Force them to see system default, no editing allowed
             'user_id' => $userid,
             'survey_type' => $survey_data['survey_type'],
             'attempt_date' => time(),
+            'course_id' => $survey_data['course_id'],
             'age' => $survey_data['age'],
             'gender' => $survey_data['gender'],
             'is_first_year' => $survey_data['is_first_year'],
@@ -77,24 +78,21 @@ if (isguestuser()) {  // Force them to see system default, no editing allowed
             'course_q1' => $survey_data['course_q1'],
             'course_q2' => $survey_data['course_q2'],
             'course_q3' => $survey_data['course_q3'],
-            'teacher_q1' => $survey_data['teacher_q1'], //teacher_q1 has now become course_q4 (new survey)
+            'course_q4' => $survey_data['course_q4'],
+            'course_q5' => $survey_data['course_q5'],
+            'teacher_q1' => $survey_data['teacher_q1'], 
             'teacher_q2' => $survey_data['teacher_q2'],
-            'teacher_q3' => $survey_data['teacher_q3'], //teacher_q3 has become teacher_q5 and note teacher_q1 and teacher_q2 is not being used
-            'teacher_q4' => $survey_data['teacher_q4'],
-            'consultation' => $survey_data['consultation'],//has been removed
-            'outcome_q1' => $survey_data['outcome_q1'],
-            'outcome_q2' => $survey_data['outcome_q2'],
+            'teacher_q3' => $survey_data['teacher_q3'],
+            'technical_q1' => $survey_data['technical_q1'],
+            'audio' => $survey_data['audio'],
+            'videos' => $survey_data['videos'],
+            'readings' => $survey_data['readings'],
+            'recorded_lectures' => $survey_data['recorded_lectures'],
+            'accessibility_input' => $survey_data['accessibility_input'],
             'has_labs' => $survey_data['has_labs'],
-            'lab_q1' => $survey_data['lab_q1'],//is being used by 8.The course
-            'lab_q2' => $survey_data['lab_q2'],//has been removed
-            'lab_q3' => $survey_data['lab_q3'],
+            'lab_q1' => $survey_data['lab_q1'],
             'has_clinicals' => $survey_data['has_clinicals'],
-            'clinical_q1' => $survey_data['clinical_q1'],//has been removed
-            'clinical_q2' => $survey_data['clinical_q2'],//has been removed
-            'clinical_q3' => $survey_data['clinical_q3'],//has been removed
-            'clinical_q4' => $survey_data['clinical_q4'],
-            'overall_q1' => $survey_data['overall_q1'],//has been removed
-            'overall_q2' => $survey_data['overall_q2'],//has been removed
+            'clinical_q1' => $survey_data['clinical_q1'],
             'suggestion' => $survey_data['suggestion'],
         ];
 
