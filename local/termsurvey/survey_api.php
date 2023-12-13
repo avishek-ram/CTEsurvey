@@ -86,7 +86,7 @@ if (isguestuser()) {  // Force them to see system default, no editing allowed
             'technical_q1' => $survey_data['technical_q1'],
             'audio' => $survey_data['audio'],
             'videos' => $survey_data['videos'],
-            'readings' => $survey_data['readings'],
+            'readings' => $survey_data['readings'], 
             'recorded_lectures' => $survey_data['recorded_lectures'],
             'accessibility_input' => $survey_data['accessibility_input'],
             'has_labs' => $survey_data['has_labs'],

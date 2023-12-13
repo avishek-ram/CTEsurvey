@@ -1597,10 +1597,10 @@
 
             var technical_q1 = $('[name="technical_q1"]:checked').val();
 
-            var audio = $('[name="audio"]:checked').val();
-            var videos = $('[name="videos"]:checked').val();
-            var readings = $('[name="readings"]:checked').val();
-            var recorded_lectures = $('[name="recorded_lectures"]:checked').val();
+            var audio = $('[name="audio"]:checked').is(":checked").toString();
+            var videos = $('[name="videos"]:checked').is(":checked").toString();
+            var readings = $('[name="readings"]:checked').is(":checked").toString();
+            var recorded_lectures = $('[name="recorded_lectures"]:checked').is(":checked").toString();
 
             var accessibility_input = $("#accessibility_input").val();
 
@@ -1681,10 +1681,10 @@
                     teacher_q2 :get_radio_value(teacher_q2),
                     teacher_q3 : get_radio_value(teacher_q3),
                     technical_q1 : get_radio_value(technical_q1),
-                    audio : audio,
-                    videos: videos,
-                    readings: readings,
-                    recorded_lectures: recorded_lectures,
+                    audio : audio ?? null,
+                    videos: videos ?? null,
+                    readings: readings ?? null,
+                    recorded_lectures: recorded_lectures ?? null,
                     accessibility_input: accessibility_input,
                     has_labs : has_labs,
                     lab_q1 : get_radio_value(lab_q1),
