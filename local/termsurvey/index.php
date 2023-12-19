@@ -18,6 +18,7 @@
  * @package     local_termsurvey
  * @author      Avishek
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @var stdClass $plugin
  */
 
 require_once(__DIR__ . '/../../config.php');

@@ -23,6 +23,6 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->component = 'local_surveydashboard';
 $plugin->version = 2022052001;
 $plugin->requires = 2016052300; // Moodle version
+$plugin->component = 'local_surveydashboard';

@@ -18,8 +18,8 @@
  * @package     local_termsurvey
  * @author      Avishek
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @var stdClass $plugin
  */
-
 
 
 // $PAGE->set_url(new moodle_url('/local/surveydashboard/manage.php'));
