@@ -1,0 +1,118 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template local_surveydashboard/dashboard
+
+    Survey Dashboard template.
+
+    Example context (json):
+    {
+        "sem_end_survey_isactive": true,
+        "mid_sem_survey_isactive": false,
+        "quarter_end_survey_isactive": true,
+        "trimester_end_survey_isactive": false
+    }
+}}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <h1>{{#str}}pluginname, local_surveydashboard{{/str}}</h1>
+        </div>
+    </div>
+    <br/>
+    <div class="row">
+        <div class="col col-sm-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{#str}}semester_end_survey, local_surveydashboard{{/str}}</h5>
+                    <div class="form-check form-switch">
+                        <input type="checkbox" class="form-check-input term_checkbox" id="sem_end_chekbox" data-type="1" {{#sem_end_survey_isactive}} checked {{/sem_end_survey_isactive}}>
+                        <label class="form-check-label" for="sem_end_chekbox">{{#str}}enable_disable_semester_end, local_surveydashboard{{/str}}</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col col-sm-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{#str}}mid_semester_survey, local_surveydashboard{{/str}}</h5>
+                    <div class="form-check form-switch">
+                        <input type="checkbox" class="form-check-input term_checkbox" id="mid_sem_chekbox" data-type="2" {{#mid_sem_survey_isactive}} checked {{/mid_sem_survey_isactive}}>
+                        <label class="form-check-label" for="mid_sem_chekbox">{{#str}}enable_disable_mid_semester, local_surveydashboard{{/str}}</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col col-sm-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{#str}}quarter_end_survey, local_surveydashboard{{/str}}</h5>
+                    <div class="form-check form-switch">
+                        <input type="checkbox" class="form-check-input term_checkbox" id="quarter_end_chekbox" data-type="3" {{#quarter_end_survey_isactive}} checked {{/quarter_end_survey_isactive}}>
+                        <label class="form-check-label" for="quarter_end_chekbox">{{#str}}enable_disable_quarter_end, local_surveydashboard{{/str}}</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col col-sm-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{#str}}trimester_end_survey, local_surveydashboard{{/str}}</h5>
+                    <div class="form-check form-switch">
+                        <input type="checkbox" class="form-check-input term_checkbox" id="trimester_end_chekbox" data-type="4" {{#trimester_end_survey_isactive}} checked {{/trimester_end_survey_isactive}}>
+                        <label class="form-check-label" for="trimester_end_chekbox">{{#str}}enable_disable_trimester_end, local_surveydashboard{{/str}}</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+(function() {
+    const apiUrl = "{{config.wwwroot}}/local/surveydashboard/survey_dash_api.php";
+    const sesskey = "{{sesskey}}";
+
+    document.querySelectorAll(".term_checkbox").forEach(function(checkbox) {
+        checkbox.addEventListener("change", function() {
+            const term = this.dataset.type;
+            const status = this.checked ? 1 : 0;
+
+            if (!term) {
+                alert("{{#str}}invalidterm, local_surveydashboard{{/str}}");
+                return;
+            }
+
+            const requestUrl = apiUrl + "?term=" + term + "&status=" + status + "&sesskey=" + sesskey;
+
+            fetch(requestUrl)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert(data.message);
+                    } else {
+                        alert(data.message || "{{#str}}error, local_surveydashboard{{/str}}");
+                    }
+                })
+                .catch(() => {
+                    alert("{{#str}}ajaxerror, local_surveydashboard{{/str}}");
+                });
+        });
+    });
+})();
+</script>

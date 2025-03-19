@@ -1,5 +1,5 @@
 <?php
-// This file is part of Moodle Course Rollover Plugin
+// This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -15,14 +15,21 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * @package     local_termsurvey
+ * Capability definitions for the local_surveydashboard module.
+ *
+ * @package     local_surveydashboard
  * @author      Avishek
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- * @var stdClass $plugin
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->component = 'local_termsurvey';
-$plugin->version = 2022052001;
-$plugin->requires = 2016052300; // Moodle version
+$capabilities = array(
+    'local/surveydashboard:manage' => array(
+        'captype' => 'write',
+        'contextlevel' => CONTEXT_SYSTEM,
+        'archetypes' => array(
+            'admin' => CAP_ALLOW,
+        ),
+    ),
+); 

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="local/surveydashboard/db" VERSION="2024032001" COMMENT="XMLDB file for survey Dashboard plugin"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../../lib/xmldb/xmldb.xsd"
+>
+  <TABLES>
+    <TABLE NAME="survey_dashboard" COMMENT="Survey status storer">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" COMMENT="Unique ID"/>
+        <FIELD NAME="surveytype" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="1 is sem-end survey; 2 is mid-sem Survey; 3 is quarter-end survey"/>
+        <FIELD NAME="surveystatus" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="1 is true ; 0 is false - survey is enabled or not"/>
+        <FIELD NAME="statuslastupdated" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="Last updated timestamp"/>
+        <FIELD NAME="lastupdatedby" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="User ID who last updated the status"/>
+        <FIELD NAME="roleid" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" COMMENT="The ID of the role"/>
+        <FIELD NAME="rolename" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="The name of the role"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" COMMENT="Primary key of the survey_dashboard table"/>
+        <KEY NAME="surveytype" TYPE="unique" FIELDS="surveytype" COMMENT="Unique index on surveytype"/>
+        <KEY NAME="lastupdatedby" TYPE="foreign" FIELDS="lastupdatedby" REFTABLE="user" REFFIELDS="id" COMMENT="Foreign key to user table"/>
+        <KEY NAME="roleid" TYPE="foreign" FIELDS="roleid" REFTABLE="role" REFFIELDS="id" COMMENT="Foreign key to role table"/>
+      </KEYS>
+      <INDEXES>
+        <INDEX NAME="surveystatus" UNIQUE="false" FIELDS="surveystatus" COMMENT="Index for filtering by status"/>
+        <INDEX NAME="statuslastupdated" UNIQUE="false" FIELDS="statuslastupdated" COMMENT="Index for sorting by last update time"/>
+      </INDEXES>
+    </TABLE>
+  </TABLES>
+</XMLDB>
